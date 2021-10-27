@@ -45,12 +45,17 @@ function min() {
 }
 
 function minPos() {
-  var min = "";
+  var tempArr = [];
+  var size = 0;
   for (var i = 0; i < array.length; i++) {
-    if (array[i] >= 0) {
-      if (min == "") min = array[i];
-      min = Math.min(min, array[i]);
+    if (array[i] > 0) {
+      tempArr[size] = array[i];
+      size++;
     }
+  }
+  var min = tempArr[0];
+  for (var i = 1; i < tempArr.length; i++) {
+    min = Math.min(min, tempArr[i]);
   }
   document.getElementById("txt4").innerHTML = `Số dương nhỏ nhất: ${min}`;
 }
