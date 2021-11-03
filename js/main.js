@@ -110,7 +110,7 @@ function isPrimeNum(x) {
 
 function findFirstPrimeNum() {
   for (var i = 0; i < array.length; i++) {
-    if (array[i] > 0) {
+    if (array[i] > 1) {
       if (isPrimeNum(array[i])) {
         document.getElementById("txt8").innerHTML = array[i];
         return;
